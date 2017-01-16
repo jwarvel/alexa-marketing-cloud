@@ -6,7 +6,7 @@ var app = new Alexa.app('marketingcloud');
 var MCDataHelper = require('./mc-data-helper');
 
 app.launch(function(req, res) {
-  var prompt = 'I can check Marketing Cloud status for you.  Currently I can get the transaction count';
+  var prompt = 'I can check Marketing Cloud status for you.  Currently, I can get the transaction count';
   res.say(prompt).reprompt(prompt).shouldEndSession(false);
 });
 
