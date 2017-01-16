@@ -1,13 +1,13 @@
 {
-  "name": "airportinfo",
-  "version": "1.0.0",
-  "description": "track FAA Airport status",
+  "name": "alexa-marketing-cloud",
+  "version": "0.0.1",
+  "description": "Alexa Skill to get Marketing Cloud status",
   "main": "index.js",
   "scripts": {
     "test": "mocha test/"
   },
-  "author": "josh skeen",
-  "license": "ISC",
+  "author": "Jill Warvel",
+  "license": "",
   "dependencies": {
     "alexa-app": "^2.3.2",
     "chai": "^3.5.0",
