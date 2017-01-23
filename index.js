@@ -7,7 +7,7 @@ var MCDataHelper = require('./mc-data-helper');
 var reprompt =  'What would you like to know?  Ask for transaction count, issue count, or busiest day.'
 
 app.launch(function (req, res) {
-    var prompt = 'I can check Marketing Cloud status for you.  Currently, I can get transaction counts, issue counts, and the busiest day.';
+    var prompt = 'I can check Marketing Cloud status for you.  I can get transaction counts, issue counts, and the busiest day.';
     res.say(prompt).reprompt(prompt).shouldEndSession(false);
 });
 
@@ -92,6 +92,19 @@ app.intent('issuesMonth', {
     }
 
 );
+
+app.intent("AMAZON.StopIntent", {}, function (req, res) {
+    res.say('Good-bye!').shouldEndSession(true).send();
+    return false;
+});
+
+app.intent('sendflow', {
+    'slots': {},
+    'utterances': ['{|what do you think of|tell me about|do you like} {send flow|sendflow}']
+}, function (req, res) {
+    res.say("Sendflow is a joy to use!").shouldEndSession(false).send();;
+    return false;
+});
 
 
 module.exports = app;

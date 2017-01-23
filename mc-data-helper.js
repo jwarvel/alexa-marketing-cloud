@@ -105,10 +105,10 @@ MCDataHelper.prototype.formatIssueCounts = function (response, range) {
     var template = _.template('${stack} had ${count} issues. ');
 
     _.forEach(issues, function (issue) {
-        text += template(issue);
+        text += template(issue).replace(' 1 issues',' 1 issue');
     });
 
-    return text.replace(' 1 issues',' 1 issue');
+    return text
 
 
 };
