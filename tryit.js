@@ -13,11 +13,26 @@ var MCDataHelper = require('./mc-data-helper');
 
 
 var mcDataHelper = new MCDataHelper();
-mcDataHelper.requestTransactionCount().then(function (response) {
-    console.log('transaction count: ', mcDataHelper.formatTransactionCount(response));
-}).catch(function (err) {
-        console.log('error', err);
+//
+//mcDataHelper.getTransactionCount()
+//    .then(function (response) {
+//    console.log('transaction count: ', mcDataHelper.formatTransactionCount(response));
+//    }).catch(function (err) {
+//        console.log('error', err);
+//    });
 
+mcDataHelper.getMonthlyTransactionCount()
+    .then(function (response) {
+        console.log('transaction count: ', mcDataHelper.formatMaxTransactionCount(response));
+    }).catch(function (err) {
+        console.log('error', err);
     });
+
+//mcDataHelper.getIssueCounts()
+//    .then(function (response) {
+//        console.log( mcDataHelper.formatIssueCounts(response));
+//    }).catch(function (err) {
+//        console.log('error', err);
+//    });
 
 
